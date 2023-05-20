@@ -17,6 +17,10 @@ public class WhenWorkingWithFloatingPointNumbers {
         double farenheit = 0.0d;
 
         // TODO: Use a floating point calculation to calculate the farenheit equivalent of the celcius value.
+        float equivalentFactor = 1.8F;
+
+        farenheit = equivalentFactor * celcius + 32.0;
+        farenheit = Math.round(farenheit * 100.0) / 100.0;
 
         assertThat(farenheit, equalTo(80.6));
     }
@@ -31,6 +35,9 @@ public class WhenWorkingWithFloatingPointNumbers {
         double weightInPounds = 0;
 
         // TODO: Use a floating point calculation to calculate the correct weight in pounds
+        float equivalentFactor = 2.20462F;
+        weightInPounds = equivalentFactor * weightInKilograms;
+        weightInPounds = Math.round(weightInPounds * 1000.0) / 1000.0;
 
         assertThat(weightInPounds, equalTo(110.231));
 
